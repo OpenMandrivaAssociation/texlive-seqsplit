@@ -18,9 +18,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
-Conflicts:	texlive-source <= 20110705-3
 
 %description
 When one needs to type long sequences of letters (such as in
@@ -32,20 +29,12 @@ paragraph-maker to do the splitting. While the package may
 obviously be used to typeset DNA sequences, the user may
 consider the dnaseq as a rather more powerful alternative.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -57,7 +46,6 @@ consider the dnaseq as a rather more powerful alternative.
 %doc %{_texmfdistdir}/source/latex/seqsplit/Makefile
 %doc %{_texmfdistdir}/source/latex/seqsplit/seqsplit.dtx
 %doc %{_texmfdistdir}/source/latex/seqsplit/seqsplit.ins
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -68,5 +56,3 @@ consider the dnaseq as a rather more powerful alternative.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
