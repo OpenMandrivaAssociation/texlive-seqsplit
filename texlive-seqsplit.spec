@@ -6,7 +6,7 @@
 # catalog-version 0.1
 Name:		texlive-seqsplit
 Version:	0.1
-Release:	1
+Release:	2
 Summary:	Split long sequences of characters in a neutral way
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/seqsplit
