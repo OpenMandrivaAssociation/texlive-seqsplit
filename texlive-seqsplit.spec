@@ -56,3 +56,17 @@ consider the dnaseq as a rather more powerful alternative.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.1-2
++ Revision: 755909
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.1-1
++ Revision: 719507
+- texlive-seqsplit
+- texlive-seqsplit
+- texlive-seqsplit
+- texlive-seqsplit
+
