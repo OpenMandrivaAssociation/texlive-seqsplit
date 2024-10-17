@@ -3,7 +3,7 @@ Version:	15878
 Release:	2
 Summary:	Split long sequences of characters in a neutral way
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/seqsplit
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/seqsplit
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/seqsplit.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/seqsplit.doc.r%{version}.tar.xz
